@@ -1,3 +1,13 @@
 <template name="index">
-    <h2>Welcome</h2>
+    <h2>New tasks</h2>
+  <form>
+		<label>Content</label><textarea name="contenu" ></textarea><br/>
+		<button type="submit" >Add</button>
+	</form>
+	<h3>Todo list</h3>
+	<ul>
+	{{#each tasks}}
+		<li><b>{{ content }}</b></li>
+	{{/each}}
+	</ul>
 </template>
