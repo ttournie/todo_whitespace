@@ -1,4 +1,11 @@
 <template name="mainLayout">
   <h1>My application</h1>
+  <div class="navbar navbar-static-top navbar-inverse">
+    <div class="navbar-inner">
+        <div class="nav pull-right">
+          {{> user_info}}
+        </div>
+    </div>
+  </div>
   {{> yield}}
 </template>
