@@ -23,10 +23,19 @@ Meteor.methods({
   deleteTask: function (taskId) {
     var task = Tasks.findOne(taskId);
     // Only the task owner can delete it.
-  if (task.owner !== Meteor.userId()) {
+    if (task.owner !== Meteor.userId()) {
       throw new Meteor.Error("not-authorized");
     }
 
     Tasks.remove(taskId);
+  },
+
+  done: function (taskId, setChecked) {
+    var task = Tasks.findOne(taskId);
+    if (task.owner !== Meteor.userId()) {
+      throw new Meteor.Error("not-authorized");
+    }
+
+    Tasks.update(taskId, { $set: { checked: setChecked} });
   },
 });

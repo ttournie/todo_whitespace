@@ -19,4 +19,8 @@ Template.task.events({
   "click .delete": function () {
     Meteor.call("deleteTask", this._id);
   },
+  "click .toggle-checked": function () {
+  // Set the checked property to the opposite of its current value
+  Meteor.call("done", this._id, ! this.checked);
+},
 });
