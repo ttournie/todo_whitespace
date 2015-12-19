@@ -8,8 +8,16 @@
   	<h3>Todo list</h3>
   	<ul>
   	{{#each tasks}}
-  		<li><b>{{ content }}</b></li>
+  		{{> task}}
   	{{/each}}
   	</ul>
   {{/if}}
+</template>
+
+
+<template name="task">
+  <li>
+    <button class="delete">&times;</button>
+    <span class="text"><strong>{{username}}</strong> - {{content}}</span>
+  </li>
 </template>
