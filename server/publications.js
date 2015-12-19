@@ -1,6 +1,7 @@
 Meteor.publish("allTasksHeaders", function(){
+    // Only display user tasks.
     return Tasks.find({}, {
-        fields: {content: 0}
+        owner: this.userId
     });
 });
 
