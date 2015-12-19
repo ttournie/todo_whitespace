@@ -2,7 +2,7 @@
     <h2>New tasks</h2>
     {{#if currentUser}}
     <form>
-  		<label>Content</label><textarea name="contenu" ></textarea><br/>
+  		<label>Content</label><textarea name="content" ></textarea><br/>
   		<button type="submit" >Add</button>
   	</form>
   	<h3>Todo list</h3>
@@ -12,12 +12,4 @@
   	{{/each}}
   	</ul>
   {{/if}}
-</template>
-
-
-<template name="task">
-  <li>
-    <button class="delete">&times;</button>
-    <span class="text"><strong>{{username}}</strong> - {{content}}</span>
-  </li>
 </template>
