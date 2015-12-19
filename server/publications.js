@@ -20,4 +20,13 @@ Meteor.methods({
       username: Meteor.user().username
     });
   },
+  deleteTask: function (taskId) {
+    var task = Tasks.findOne(taskId);
+    // Only the task owner can delete it.
+  if (task.owner !== Meteor.userId()) {
+      throw new Meteor.Error("not-authorized");
+    }
+
+    Tasks.remove(taskId);
+  },
 });

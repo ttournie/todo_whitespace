@@ -13,3 +13,10 @@ Template.index.events({
     e.target.content.value = "";
 	}
 });
+
+// task event.
+Template.task.events({
+  "click .delete": function () {
+    Meteor.call("deleteTask", this._id);
+  },
+});
