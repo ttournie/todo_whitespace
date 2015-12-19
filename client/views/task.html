@@ -1,6 +1,6 @@
 <template name="task">
   <li>
-    <span class="text">{{content}} - <strong>{{username}}</strong></span>
+    <span class="text {{#if checked}}checked{{/if}}">{{content}} - <strong>{{username}}</strong></span>
     <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
     <button class="delete btn btn-default">
       &times;
