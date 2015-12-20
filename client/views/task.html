@@ -2,8 +2,8 @@
   <li>
     <span class="text {{#if checked}}checked{{/if}}">{{> editableText collection="tasks" field="content"}}</span>
     <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
-    <button class="delete btn btn-default">
-      &times;
-    </button>
+    <a href="#" class="delete">
+      remove
+    </a>
   </li>
 </template>

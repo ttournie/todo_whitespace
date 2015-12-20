@@ -21,5 +21,5 @@ iron:router
 accounts-base
 accounts-password
 accounts-ui
-bootstrap
 babrahams:editable-text
+mrt:bootstrap-3
