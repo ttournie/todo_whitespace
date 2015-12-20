@@ -1,9 +1,14 @@
 <template name="index">
     <h2>New tasks</h2>
+
     {{#if currentUser}}
     <form>
-  		<input type="text" placeholder="Task description" name="content" ><br/>
-  		<button type="submit" class="btn btn-default" >Add</button>
+      <div class="input-group">
+  		<input type="text" class="form-control" placeholder="Task description" name="content" >
+        <span class="input-group-btn">
+  	      <button type="submit" class="btn btn-default" >Add</button>
+        </span>
+      </div>
   	</form>
   	<h3>Todo list</h3>
   	<ul class="task-list">
