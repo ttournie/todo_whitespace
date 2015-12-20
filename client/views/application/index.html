@@ -3,30 +3,30 @@
       <h2>New tasks</h2>
       <form>
         <div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
-        <div class="input-group">
-    		<input type="text" class="form-control" placeholder="Task description" name="content" >
-        <span class="input-group-btn">
-    	    <button type="submit" class="btn btn-default" >Add</button>
-        </span>
-        </div>
-        </div>
-      </div>
+          <div class="col-xs-4 col-xs-offset-4">
+            <div class="input-group">
+    		        <input type="text" class="form-control" placeholder="Task description" name="content" >
+                <span class="input-group-btn">
+    	             <button type="submit" class="btn btn-default" >Add</button>
+                 </span>
+               </div>
+             </div>
+           </div>
     	</form>
     	<h3>Todo list</h3>
       <div class="row">
-      <div class="col-xs-4 col-xs-offset-4">
-      <div class="panel panel-default">
-        <div class="panel-body">
-        	<ul class="task-list">
-        	{{#each tasks}}
-        		{{> task}}
-        	{{/each}}
-        	</ul>
+        <div class="col-xs-4 col-xs-offset-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+        	     <ul class="task-list">
+        	        {{#each tasks}}
+        		        {{> task}}
+        	        {{/each}}
+        	    </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
   {{else}}
     <h2>Please login or register to see your tasks.</h2>
   {{/if}}

@@ -1,17 +1,15 @@
 <template name="task">
   <li>
     <div class="row">
-<div class="col-xs-4">
-    <span class="text {{#if checked}}checked{{/if}}">{{> editableText collection="tasks" field="content"}}</span>
+      <div class="col-xs-4">
+        <span class="text {{#if checked}}checked{{/if}}">{{> editableText collection="tasks" field="content"}}</span>
+      </div>
+      <div class="col-xs-4">
+        <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+      </div>
+      <div class="col-xs-4">
+        <a href="#" class="delete">remove</a>
+      </div>
     </div>
-    <div class="col-xs-4">
-    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
-    </div>
-    <div class="col-xs-4">
-    <a href="#" class="delete">
-      remove
-    </a>
-    </div>
-  </div>
   </li>
 </template>

@@ -30,7 +30,7 @@ Meteor.methods({
 
     Tasks.remove(taskId);
   },
-
+  // Donne tasks function.
   done: function (taskId, setChecked) {
     var task = Tasks.findOne(taskId);
     if (task.owner !== Meteor.userId()) {
