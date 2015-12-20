@@ -4,7 +4,7 @@
     {{#if currentUser}}
     <form>
       <div class="row">
-  <div class="col-xs-4 col-xs-offset-4 centered">
+  <div class="col-xs-4 col-xs-offset-4">
       <div class="input-group">
   		<input type="text" class="form-control" placeholder="Task description" name="content" >
       <span class="input-group-btn">
@@ -15,10 +15,18 @@
     </div>
   	</form>
   	<h3>Todo list</h3>
-  	<ul class="task-list">
-  	{{#each tasks}}
-  		{{> task}}
-  	{{/each}}
-  	</ul>
+    <div class="row">
+    <div class="col-xs-4 col-xs-offset-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+      	<ul class="task-list">
+      	{{#each tasks}}
+      		{{> task}}
+      	{{/each}}
+      	</ul>
+      </div>
+    </div>
+  </div>
+</div>
   {{/if}}
 </template>
